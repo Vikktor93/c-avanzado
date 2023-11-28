@@ -61,7 +61,7 @@ void depositar(MonitorCuentaBCO *monitor, int cantidad)
 }
 
 // Retiro de dinero de la cuenta bancaria
-void retiro(MonitorCuentaBCO *monitor, int cantidad)
+void retirar(MonitorCuentaBCO *monitor, int cantidad)
 {
     accesoMonitor(monitor);
 
@@ -88,7 +88,7 @@ void *hilodeposito(MonitorCuentaBCO *monitor)
 // Hilo de prueba para retirar dinero
 void *hiloretiro(MonitorCuentaBCO *monitor)
 {
-    retiro(monitor, 50);
+    retirar(monitor, 50);
     pthread_exit(NULL);
 }
 
